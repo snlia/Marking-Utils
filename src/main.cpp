@@ -3,6 +3,7 @@
 #include <cstdio>
 #include <iostream>
 #include <fstream>
+#include <cstring>
 
 using namespace cv;
 using namespace std;
@@ -78,7 +79,8 @@ int main(int argc, const char *argv[])
             pt = pt + Point (go[3], 0);
         }
         if (key == 'u') {
-            res.pop_back ();
+            if (res.size())
+                res.pop_back ();
         }
         if (key == 'q') {
             break;
